@@ -7,3 +7,17 @@
     }
   }
 })(this);
+
+(function(exports) {
+  function testReturnArray() {
+    var list = new listOfNotes();
+
+    var assert = {
+      isEqual: function(list) {
+        if (list !== viewList()) {
+          throw new Error("Assertion failed: did not return array");
+        }
+      }
+    };
+  }
+})(this);
